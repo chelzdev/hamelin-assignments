@@ -27,3 +27,6 @@ calculateGrade score =
         else 
             "Invalid Score"
 --Anything else aside these range and a nagetive number should return "Invalide Score"           
+
+
+
