@@ -370,4 +370,96 @@ fizzBuzz number =
         "Buzzing into the negatives, are we? Better don't be negative in life"
 
     else
-        String.fromInt number      
+        String.fromInt number   
+
+
+
+checkValidDate : String -> Int -> String
+checkValidDate month day =
+        case month of
+        "January" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: January has only 31 days"
+
+        "February" ->
+            if day >= 1 && day <= 28 then
+                "Valid Date"
+
+            else
+                "Invalid Date: February has only 28 days"
+
+        "March" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: March has only 31 days"
+
+        "April" ->
+            if day >= 1 && day <= 30 then
+                "Valid Date"
+
+            else
+                "Invalid Date: April has only 30 days"
+
+        "May" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: May has only 31 days"
+
+        "June" ->
+            if day >= 1 && day <= 30 then
+                "Valid Date"
+
+            else
+                "Invalid Date: June has only 30 days"
+
+        "July" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: July has only 31 days"
+
+        "August" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: August has only 31 days"
+
+        "September" ->
+            if day >= 1 && day <= 30 then
+                "Valid Date"
+
+            else
+                "Invalid Date: September has only 30 days"
+
+        "October" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: October has only 31 days"
+
+        "November" ->
+            if day >= 1 && day <= 30 then
+                "Valid Date"
+
+            else
+                "Invalid Date: November has only 30 days"
+
+        "December" ->
+            if day >= 1 && day <= 31 then
+                "Valid Date"
+
+            else
+                "Invalid Date: December has only 31 days"
+
+        _ ->
+            "Invalid Date: '" ++ month ++ "' is not a valid month"   
