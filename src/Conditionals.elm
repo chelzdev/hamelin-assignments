@@ -312,9 +312,40 @@ weekdayMood day =
 
     else if day == "Friday" then
         "TGIF!"
-        
+
     else if day == "Saturday" || day == "Sunday" then
         "It's the weekend, baby!"
 
     else
         "Is that a public holiday?"
+
+
+
+
+
+weeklydayMood : String -> String
+weeklydayMood day = 
+ case day of
+        "Monday" ->
+            "Back to the grind!"
+
+        "Tuesday" ->
+            "Just another day in the grind"
+
+        "Wednesday" ->
+            "Just another day in the grind"
+
+        "Thursday" ->
+            "Just another day in the grind"
+
+        "Friday" ->
+            "TGIF!"
+
+        "Saturday" ->
+            "It's the weekend, baby!"
+
+        "Sunday" ->
+            "It's the weekend, baby!"
+
+        _ ->
+            "Is that a public holiday?"       
