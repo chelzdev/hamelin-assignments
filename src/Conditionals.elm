@@ -302,10 +302,19 @@ convertTo12HourFormat hour =
 
 
 
+weekdayMood : String -> String
+weekdayMood day = 
+    if day == "Monday" then
+        "Back to the grind!"
 
+    else if day == "Tuesday" || day == "Wednesday" || day == "Thursday" then
+        "Just another day in the grind"
 
+    else if day == "Friday" then
+        "TGIF!"
+        
+    else if day == "Saturday" || day == "Sunday" then
+        "It's the weekend, baby!"
 
-  
-
-
-
+    else
+        "Is that a public holiday?"
