@@ -348,4 +348,26 @@ weeklydayMood day =
             "It's the weekend, baby!"
 
         _ ->
-            "Is that a public holiday?"       
+            "Is that a public holiday?" 
+
+
+
+fizzBuzz : Int -> String
+fizzBuzz number =
+            if number // 3 == 0 then
+        "Fizz"
+
+    else if number // 5 == 0 then
+        "Buzz"
+
+    else if number // 3 == 0 && number // 5 == 0 then
+        "FizzBuzz"
+
+    else if number > 100 then
+        String.fromInt number ++ " - Just another number in the universe!"
+
+    else if number < 0 then
+        "Buzzing into the negatives, are we? Better don't be negative in life"
+
+    else
+        String.fromInt number      
