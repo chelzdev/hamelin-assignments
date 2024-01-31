@@ -252,6 +252,30 @@ convertNumberToMonth month =
 
 
 
+-- This function trafficLightAction simulates a traffic light.
+trafficLightAction : String -> String
+trafficLightAction color =
+    if color == "Red" then
+        "Stop"
+-- This line checks if input color is "Red" then
+-- return "Stop"         
+
+    else if color == "Yellow" then
+        "Prepare to stop"
+-- This line checks if input color is "Yellow" then
+-- return "Prepare to stop"        
+
+    else if color == "Green" then
+        "Go"
+-- This line checks if input color is "Green" then
+-- return "Go"        
+
+    else
+          "Are we on Mars?"
+-- Anything else outside of these colors ("Red", "Yellow", and "Green")         
+-- then it will return "Are we on Mars?"
+
+
 
 
 
