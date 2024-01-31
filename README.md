@@ -1,2 +1,3 @@
-# hamelin-assignments
-Where I will keep solutions of my hamelin assignments
+# Hamelin Assignments
+
+A repository for my solutions to assignments at Hamelin.
