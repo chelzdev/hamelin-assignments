@@ -286,6 +286,25 @@ trafficLightActionIfElse color =
 
 
 
+
+trafficLightActionCase : String -> String
+trafficLightActionCase color =
+    case color of
+        "Red" ->
+            "Stop"
+
+        "Yellow" ->
+            "Prepare to stop"
+
+        "Green" ->
+            "Go"
+
+        _ ->
+            color ++ "? Are we on Mars?"
+
+
+
+
 convertTo12HourFormat: Int -> (Int, String)
 convertTo12HourFormat hour =
     if hour >= 0 && hour <= 23 then
