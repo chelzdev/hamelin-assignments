@@ -145,8 +145,8 @@ twelveDaysOfChrismassCase day =
 
 
 
-twelveDaysOfChristmass : Int -> String
-twelveDaysOfChristmass day =
+twelveDaysOfChristmasIfElse : Int -> String
+twelveDaysOfChristmasIfElse day =
 
     if day == 1 then
         "A Partridge in a Pear Tree"
