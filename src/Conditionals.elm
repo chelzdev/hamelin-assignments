@@ -329,8 +329,8 @@ convertTo12HourFormat hour =
 
 
 
-weekdayMood : String -> String
-weekdayMood day = 
+weekdayMoodIfElse : String -> String
+weekdayMoodIfElse day = 
     if day == "Monday" then
         "Back to the grind!"
 
