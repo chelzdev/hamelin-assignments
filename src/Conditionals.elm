@@ -4,41 +4,46 @@ module Conditionals exposing (..)
 calculateGrade : Int -> String
 calculateGrade score =
 
-    if     score >= 90 && score <= 100 then
+    if     score >= 100 && score <= 0 then
+             "Invalide Score"    
+            
+-- If score is greater than or equal to 100 and score 
+-- is less than or equal 0  "Invalide Score" will be assign as the grade.
+
+    else if score >= 90  then
             "A"
--- If the score is between 90 and 100 "A"  will be assign as the grade.
+--If score is greater than or equal 90 "A"  will be assign as the grade.
 
-    else if score >= 80 && score <= 89 then
+    else if score >= 80 then
             "B"
---If the score is between 80 and 89 "B"  will be assign as the grade.
+--If score is greater than or equal 80 "B" will be assign as the grade.            
 
-    else if score >= 70 && score <= 79 then
+     else if score >= 70 then
             "C"
---If the score is between 70 and 79 "C"  will be assign as the grade.            
+--If score is greater than or equal 70 "C" will be assign as the grade.            
 
-     else if score >= 60 && score <= 69 then
+     else if score >= 60 then
             "D"
---If the score is between 60 and 69 "D"  will be assign as the grade.            
-
-     else if   score >= 0 && score <= 59 then
-            "F"
---If the score is between 0 and less than 59 "F"  will be assign as the grade.            
+--If the score greater than or equal 60 "D" will be assign as the grade.            
 
         else 
-            "Invalid Score"
---Anything else aside these range and a nagetive number should return "Invalide Score" 
+            "F"
+--Anything else from 59 to 0 should return "F" 
 
 
 
 categorizeCharacter : Char -> String
 categorizeCharacter char =
-    if char == 'a' || 
-       char == 'A' then
+    if char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u' ||
+       char == 'A' || char == 'E' || char == 'I' || char == 'O' || char == 'U' then 
         "Vowel"
+
 --This line checks if character 'A' is (uppercase or lowercase) 
 -- then it should return "Vowel"  which is a string.  
-    else if char == 'z' || char == 'Z' then
+    --else if char == 'z' || char == 'Z' then
+    else if (char >= 'b' && char <= 'z') || (char >= 'B' && char <= 'Z') then
         "Consonant"
+        
 --This line checks if character 'Z' is (uppercase or lowercase) 
 -- then returns a string "Consonant" 
     else if char == '3' then
