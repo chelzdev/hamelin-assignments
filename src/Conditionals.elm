@@ -180,8 +180,8 @@ twelveDaysOfChristmasIfElse day =
 
 -- This function is an ifElse expression that 
 -- validate a number based on the month.
-convertNumbersToMonth : Int -> String
-convertNumbersToMonth month =
+convertNumberToMonthIfElse : Int -> String
+convertNumberToMonthIfElse month =
     if month == 1 then
         "January"
 -- If the number is (1) then
