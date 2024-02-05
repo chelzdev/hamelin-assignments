@@ -239,8 +239,8 @@ convertNumberToMonthIfElse month =
 -- This function is case expression that
 -- takes an Integer and returns a String.
 
-convertNumberToMonth : Int -> String
-convertNumberToMonth month =
+convertNumberToMonthCase : Int -> String
+convertNumberToMonthCase month =
     case month of
   
         1 -> "January"
