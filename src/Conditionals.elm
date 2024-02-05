@@ -261,8 +261,8 @@ convertNumberToMonthCase month =
 
 
 -- This function trafficLightAction simulates a traffic light.
-trafficLightAction : String -> String
-trafficLightAction color =
+trafficLightActionIfElse : String -> String
+trafficLightActionIfElse color =
     if color == "Red" then
         "Stop"
 -- This line checks if input color is "Red" then
