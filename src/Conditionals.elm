@@ -38,18 +38,25 @@ categorizeCharacter char =
        char == 'A' || char == 'E' || char == 'I' || char == 'O' || char == 'U' then 
         "Vowel"
 
---This line checks if character 'A' is (uppercase or lowercase) 
--- then it should return "Vowel"  which is a string.  
-    --else if char == 'z' || char == 'Z' then
-    else if (char >= 'b' && char <= 'z') || (char >= 'B' && char <= 'Z') then
+--This line checks if character is (uppercase or lowercase) 
+-- then it should return "Vowel" as a string.  
+    else if char == 'B' || char == 'b' || char == 'C' || char == 'c' || 
+    char == 'D' || char == 'd' || char == 'F' || char == 'f' || char == 'G' ||
+    char == 'g' || char == 'H' || char == 'h' || char == 'J' || char == 'j' ||
+    char == 'K' || char == 'k' || char == 'L' || char == 'l' || char == 'M' || 
+    char == 'm' || char == 'N' || char == 'n' || char == 'P' || char == 'p' ||
+    char == 'Q' || char == 'q' || char == 'R' || char == 'r' || char == 'S' ||
+    char == 's' || char == 'T' || char == 't' || char == 'V' || char == 'v' ||
+    char == 'W' || char == 'w' || char == 'X' || char == 'x' || char == 'Y' ||
+    char == 'y' || char == 'Z' || char == 'z' then
         "Consonant"
-        
---This line checks if character 'Z' is (uppercase or lowercase) 
+
+--This line checks if character is (uppercase or lowercase) 
 -- then returns a string "Consonant" 
-    else if char == '3' then
+   else if char >= '0' && char <= '9' then
         "Digit"
---This line checks if character is '3'  
--- then  it returns a string "Digit"
+--This line checks if character is greater than or equal to '0'  
+-- And char is less than or equal to '9' then  it returns a string "Digit"
     else if char == '@' then
         "Unknown"
 --This line checks if character that's not categorized or a symbols 
