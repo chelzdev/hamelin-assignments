@@ -379,25 +379,31 @@ weeklydayMoodCase day =
 
 
 
-fizzBuzz : Int -> String
-fizzBuzz number =
-            if number // 3 == 0 then
-        "Fizz"
 
-    else if number // 5 == 0 then
-        "Buzz"
 
-    else if number // 3 == 0 && number // 5 == 0 then
-        "FizzBuzz"
+fizzBuzzGame : Int -> String
+fizzBuzzGame number =
+    case ( number // 3, number // 5 ) of
+        ( 0, 0 ) ->
+            "FizzBuzz"
 
-    else if number > 100 then
-        String.fromInt number ++ " - Just another number in the universe!"
+        ( 0, _ ) ->
+            "Fizz"
 
-    else if number < 0 then
-        "Buzzing into the negatives, are we? Better don't be negative in life"
+        ( _, 0 ) ->
+            "Buzz"
 
-    else
-        String.fromInt number   
+        _ ->
+            if number < 0 then
+                "Hmm, negative numbers and zero are not very fizzy or buzzy, are they?"
+
+            else if number > 100 then
+                String.fromInt number ++ " - Just another number in the universe!"
+
+            else
+                String.fromInt number
+
+
 
 
 
