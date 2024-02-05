@@ -350,8 +350,8 @@ weekdayMoodIfElse day =
 
 
 
-weeklydayMood : String -> String
-weeklydayMood day = 
+weeklydayMoodCase : String -> String
+weeklydayMoodCase day = 
  case day of
         "Monday" ->
             "Back to the grind!"
