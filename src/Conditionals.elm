@@ -98,8 +98,8 @@ ageClassifier age =
 
 --This function twelveDaysOfChrismass is a case expression that takes an integer
 -- day as input and returns a string as an output.
-twelveDaysOfChrismass : Int -> String
-twelveDaysOfChrismass day =
+twelveDaysOfChrismassCase : Int -> String
+twelveDaysOfChrismassCase day =
     case day of 
 
         1 ->
