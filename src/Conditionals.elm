@@ -432,25 +432,23 @@ weeklydayMoodCase day =
 
 fizzBuzzGame : Int -> String
 fizzBuzzGame number =
-    case ( number // 3, number // 5 ) of
-        ( 0, 0 ) ->
-            "FizzBuzz"
+    if number < 0 then
+        "Buzzing into the negatives, are we?"
 
-        ( 0, _ ) ->
-            "Fizz"
+    else if modBy 3 number == 0 && modBy 5 number == 0 then
+        "FizzBuzz"
 
-        ( _, 0 ) ->
-            "Buzz"
+    else if modBy 3 number == 0 then
+        "Fizz"
 
-        _ ->
-            if number < 0 then
-                "Hmm, negative numbers and zero are not very fizzy or buzzy, are they?"
+    else if modBy 5 number == 0 then
+        "Buzz"
 
-            else if number > 100 then
-                String.fromInt number ++ " - Just another number in the universe!"
+    else if number > 100 then
+        String.fromInt number ++ " - Just another number in the universe!"
 
-            else
-                String.fromInt number
+    else
+        String.fromInt number
 
 
 checkValidDate : String -> Int -> String
@@ -542,3 +540,35 @@ checkValidDate month day =
 
         _ ->
             "Invalid Date: '" ++ month ++ "' is not a valid month"
+
+
+
+-- Function to check if a given year is a leap year
+-- Function to validate a date based on the month and day
+
+
+isValidDate : String -> Int -> String
+isValidDate month day =
+    let
+        -- Determine the number of days in the specified month
+        daysInMonth =
+            if List.member month [ "April", "June", "September", "November" ] then
+                30
+
+            else if month == "February" then
+                28
+
+            else
+                31
+    in
+    -- Check if the date is valid and provide the appropriate string
+    if day >= 1 && day <= daysInMonth then
+        "Valid Date"
+
+    else
+        "Invalid Date: "
+
+
+
+-- ++ month ++ " has only " ++ String.fromInt daysInMonth ++ " days"
+-- Examples
