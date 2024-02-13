@@ -453,122 +453,48 @@ fizzBuzzGame number =
 
 checkValidDate : String -> Int -> String
 checkValidDate month day =
-    case month of
-        "January" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: January has only 31 days"
-
-        "February" ->
-            if day >= 1 && day <= 28 then
-                "Valid Date"
-
-            else
-                "Invalid Date: February has only 28 days"
-
-        "March" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: March has only 31 days"
-
-        "April" ->
-            if day >= 1 && day <= 30 then
-                "Valid Date"
-
-            else
-                "Invalid Date: April has only 30 days"
-
-        "May" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: May has only 31 days"
-
-        "June" ->
-            if day >= 1 && day <= 30 then
-                "Valid Date"
-
-            else
-                "Invalid Date: June has only 30 days"
-
-        "July" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: July has only 31 days"
-
-        "August" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: August has only 31 days"
-
-        "September" ->
-            if day >= 1 && day <= 30 then
-                "Valid Date"
-
-            else
-                "Invalid Date: September has only 30 days"
-
-        "October" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: October has only 31 days"
-
-        "November" ->
-            if day >= 1 && day <= 30 then
-                "Valid Date"
-
-            else
-                "Invalid Date: November has only 30 days"
-
-        "December" ->
-            if day >= 1 && day <= 31 then
-                "Valid Date"
-
-            else
-                "Invalid Date: December has only 31 days"
-
-        _ ->
-            "Invalid Date: '" ++ month ++ "' is not a valid month"
-
-
-
--- Function to check if a given year is a leap year
--- Function to validate a date based on the month and day
-
-
-isValidDate : String -> Int -> String
-isValidDate month day =
     let
-        -- Determine the number of days in the specified month
-        daysInMonth =
-            if List.member month [ "April", "June", "September", "November" ] then
-                30
+        validMonth =
+            if month == "January" || month == "March" || month == "May" || month == "July" || month == "August" || month == "October" || month == "December" then
+                "Valid"
+
+            else if month == "April" || month == "June" || month == "September" || month == "November" then
+                "Valid"
 
             else if month == "February" then
-                28
+                if day > 0 && day <= 28 then
+                    "Valid"
+
+                else
+                    "Invalid"
 
             else
-                31
+                "Invalid"
+
+        validDay =
+            if month == "April" || month == "June" || month == "September" || month == "November" then
+                if day > 0 && day <= 30 then
+                    "Valid"
+
+                else
+                    "Invalid"
+
+            else if day > 0 && day <= 31 then
+                "Valid"
+
+            else
+                "Invalid"
     in
-    -- Check if the date is valid and provide the appropriate string
-    if day >= 1 && day <= daysInMonth then
-        "Valid Date"
+    if validMonth == "Valid" then
+        if validDay == "Valid" then
+            "Valid Date"
+
+        else
+            "Invalid Date: " ++ month ++ " has only 30 days"
 
     else
-        "Invalid Date: "
+        "Invalid Date: '" ++ month ++ "' is not a valid month"
 
 
 
--- ++ month ++ " has only " ++ String.fromInt daysInMonth ++ " days"
--- Examples
+-- Function to validate a date based on the month and day
