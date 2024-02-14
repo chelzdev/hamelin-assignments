@@ -36,28 +36,38 @@ calculateGrade score =
 
 categorizeCharacter : Char -> String
 categorizeCharacter char =
-    if Char.isAlpha char then
-        let
-            lowercaseChar =
-                Char.toLower char
+    --This line checks if the character is a vowel for both uppercase or lowercase
+    if
+        char
+            == 'a'
+            || char
+            == 'e'
+            || char
+            == 'i'
+            || char
+            == 'o'
+            || char
+            == 'u'
+            || char
+            == 'A'
+            || char
+            == 'E'
+            || char
+            == 'I'
+            || char
+            == 'O'
+            || char
+            == 'U'
+    then
+        "Vowel"
+        --This line Checks if the character is a digit from (0 TO 9)
 
-            --This line handles both uppercase and lowercase characters.
-            --And it also check if the character is alphabetic,
-            --It converts the character to lowercase using Char.toLower.
-        in
-        if List.member lowercaseChar [ 'a', 'e', 'i', 'o', 'u' ] then
-            "Vowel"
-            --This line checks if the listed character member here is alphabetic,
-            -- It categorizes it as a "Vowel"; else any character
-            --Outside of this box, is categorizes as a "Consonant".
-
-        else
-            "Consonant"
-
-    else if Char.isDigit char then
+    else if char >= '0' && char <= '9' then
         "Digit"
-        --If the character is not alphabetic but is a digit, from ('0' to '9')
-        -- It categorizes it as a "Digit
+        --This line checks if character is a consonant for both uppercase or lowercase
+
+    else if (char >= 'b' && char <= 'z') || (char >= 'B' && char <= 'Z') then
+        "Consonant"
 
     else
         "Unknown"
