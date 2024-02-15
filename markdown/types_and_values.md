@@ -58,7 +58,7 @@ _###Instructions: For each of the following Elm types, provide three values that
 
 13. Maybe a: Nothing, Just 42, Just "elm"
 
-14 [Bool]: [] [True, False] [False, True]
+14. [Bool]: [] [True, False] [False, True]
 
 15. List (Maybe Int): [], [Nothing, Just 42], [Just 0, Just (-10)]
 
