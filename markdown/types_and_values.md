@@ -4,7 +4,7 @@
 
 **### Instructions: For each of the following Elm values, write down its most specific type.**
 
-1.  42 - Int
+1.  42 - Number
 2.  True - Bool
 3.  3.14 - Float
 4.  'a' - Char
@@ -24,10 +24,10 @@
 18. [(True, "Yes"), (False, "No")] - List (Bool, String)
 19. Just (Just 'a') - Maybe (Maybe Char)
 20. ("Hello", [1, 2, 3]) - (String, List Int)
-21. (42, [True, False], Just 'c') - (Int, List Bool, Maybe Char)
-22. [(True, 42), (False, 24)] - List (Bool, Int)
+21. (42, [True, False], Just 'c') - (Number, List Bool, Maybe Char)
+22. [(True, 42), (False, 24)] - List (Bool, Number)
 23. [Just "Hello", Nothing, Just "World"] - List (Maybe String)
-24. ("Elm", Just [False, True], ('a', 42)) - (String, Maybe (List Bool), (Char, Int))
+24. ("Elm", Just [False, True], ('a', 42)) - (String, Maybe (List Bool), (Char, Number))
 25. Just True ('a' "chelz") [] - (Maybe Bool, (Char, String) List a)
 
 **# Part Two** :  
@@ -62,7 +62,7 @@
 
 14. [Bool]: [] [True, False] [False, True]
 
-15. List (Maybe Int): [], [Nothing, Just 42], [Just 0, Just (-10)]
+15. List (Maybe Int): [], [Nothing, Just 4 // 1], [Just 0, Just (-10)]
 
 16. List (Int, Char): [], [(1, 'a'), (2, 'b')], [(0, 'c'), (-1, 'd')]
 
@@ -70,9 +70,9 @@
 
 18. List (Bool, String): [], [(True, "hello"), (False, "world")], [(True, "elm"), (False, "programming")]
 
-19. List (Maybe Char): [], [Nothing Just 'a'], [Just 'b', Just 'c']
+19. List (Maybe Char): [], [Just 'a', Just 'b', Just 'c']
 
-20. Maybe [Int]: Nothing Just, [], Just [1, 2, 3]
+20. Maybe [Int]: Maybe (List Int)
 
 21. (String, [Int]): ("elm", []), ("hello", [1, 2, 3]),("world", [-1, 0, 1])
 
@@ -82,4 +82,4 @@
 
 24. (String, Maybe [Bool], (Char, Int)): ("elm", Just [True, False], ('a', 42)), ("hello", Nothing, ('b', -10)), ("world", Just [False, True], ('c', 0))
 
-25. List String, List Char, List Float: [ "apple", "banana", "orange", "grape" ], ['a', 'b', 'c', 'd'],[ 3.14, 2.718, 1.618, 0.577 ]
+25. List String: [ "apple", "banana", "orange", "grape" ]
