@@ -1,6 +1,8 @@
-**#Part One** :  
-**##Identifying the Type of Given Values.**  
-_###Instructions: For each of the following Elm values, write down its most specific type._
+**# Part One**:
+
+**## Identifying the Type of Given Values.**
+
+**### Instructions: For each of the following Elm values, write down its most specific type.**
 
 1.  42 - Int
 2.  True - Bool
@@ -28,9 +30,9 @@ _###Instructions: For each of the following Elm values, write down its most spec
 24. ("Elm", Just [False, True], ('a', 42)) - (String, Maybe (List Bool), (Char, Int))
 25. Just True ('a' "chelz") [] - (Maybe Bool, (Char, String) List a)
 
-**#Part Two** :  
-**##Providing Values That Satisfy Specified Types.**  
-_###Instructions: For each of the following Elm types, provide three values that satisfy the type._
+**# Part Two** :  
+**## Providing Values That Satisfy Specified Types.**  
+**### Instructions: For each of the following Elm types, provide three values that satisfy the type.**
 
 1.  Int: 0, 42, -10
 
