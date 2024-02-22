@@ -25,7 +25,7 @@
 19. Just (Just 'a') - Maybe (Maybe Char)
 20. ("Hello", [1, 2, 3]) - (String, List number)
 21. (42, [True, False], Just 'c') - (num, List Bool, Maybe Char)
-22. [(True, 42), (False, 24)] - List (Bool, num)
+22. [(True, 42), (False, 24)] - List (Bool, number)
 23. [Just "Hello", Nothing, Just "World"] - List (Maybe String)
 24. ("Elm", Just [False, True], ('a', 42)) - (String, Maybe (List Bool), (Char, num))
 25. Just True - (Maybe Bool)
@@ -76,7 +76,7 @@
 
 21. (String, [Int]): ("elm", []), ("hello", [3 // 1, 2 // 1, 1 // 1]),("world", [5 // 1, 2 // 1, 7 // 1])
 
-22. (Int, [Bool], Maybe Char): (41 // 1, [True, False], Just 'a'), (0, [], Nothing), (42 // 1, [False, True], Just 'b')
+22. (Int, [Bool], Maybe Char): (42, [True, False], Just 'a'), (0, [], Nothing), (-10, [False, True], Just 'b')
 
 23. Maybe (Maybe Int): Nothing, Just Nothing, Just (Just 42)
 
