@@ -37,37 +37,16 @@ calculateGrade score =
 categorizeCharacter : Char -> String
 categorizeCharacter char =
     --This line checks if the character is a vowel for both uppercase or lowercase
-    if
-        char
-            == 'a'
-            || char
-            == 'e'
-            || char
-            == 'i'
-            || char
-            == 'o'
-            || char
-            == 'u'
-            || char
-            == 'A'
-            || char
-            == 'E'
-            || char
-            == 'I'
-            || char
-            == 'O'
-            || char
-            == 'U'
-    then
+    if char == 'A' || char == 'E' || char == 'I' || char == 'O' || char == 'U' || char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u' then
         "Vowel"
-        --This line Checks if the character is a digit from (0 TO 9)
 
-    else if char >= '0' && char <= '9' then
+    else if Char.isDigit char then
         "Digit"
-        --This line checks if character is a consonant for both uppercase or lowercase
+        --This line Checks if the character is a digit
 
-    else if (char >= 'b' && char <= 'z') || (char >= 'B' && char <= 'Z') then
+    else if (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') then
         "Consonant"
+        --This line checks if character is a consonant for both uppercase or lowercase
 
     else
         "Unknown"
