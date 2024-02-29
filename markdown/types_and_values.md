@@ -1,8 +1,8 @@
-**# Part One**:
+# Part One:
 
-**## Identifying the Type of Given Values.**
+## Identifying the Type of Given Values.
 
-**### Instructions: For each of the following Elm values, write down its most specific type.**
+### Instructions: For each of the following Elm values, write down its most specific type.
 
 1.  42 - number
 
