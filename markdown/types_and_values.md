@@ -54,9 +54,11 @@
 
 25. Just True - (Maybe Bool)
 
-**# Part Two** :  
-**## Providing Values That Satisfy Specified Types.**  
-**### Instructions: For each of the following Elm types, provide three values that satisfy the type.**
+# Part Two:
+
+## Providing Values That Satisfy Specified Types.
+
+### Instructions: For each of the following Elm types, provide three values that satisfy the type.
 
 1.  Int:
 
@@ -82,7 +84,7 @@
     - 'b'
     - 'c'
 
-5.  [Int]:
+5.  List Int:
 
     - []
     - [2 // 1, 5 // 1]
@@ -108,9 +110,9 @@
 
 9.  Maybe String:
 
-    - Nothing Jus
-    - "elm" Just
-    - "hello"
+    - Nothing
+    - Just "Elm"
+    - Just "hello"
 
 10. List (Bool, Int):
 
@@ -121,8 +123,8 @@
 11. Maybe Int:
 
     - Nothing
-    - Just 42 // 1
-    - Just 5 // 1
+    - Just (42 // 1)
+    - Just (5 // 1)
 
 12. List a:
 
@@ -136,7 +138,7 @@
     - Just 42
     - Just "elm"
 
-14. [Bool]:
+14. List Bool:
 
     - []
     - [True, False]
@@ -145,8 +147,8 @@
 15. List (Maybe Int):
 
     - []
-    - [Nothing, Just 4 // 1]
-    - [Just 5 // 1, Just (1 // 1)]
+    - [Nothing, Just (4 // 1)]
+    - [Just (5 // 1), Just (1 // 1)]
 
 16. List (Int, Char):
 
@@ -158,7 +160,7 @@
 
     - Nothing Just
     - Nothing Just
-    - (Just 'a')
+    - Just 'a'
 
 18. List (Bool, String):
 
@@ -171,20 +173,21 @@
     - []
     - [Just 'a', Just 'b', Just 'c']
 
-20. Maybe [Int]:
+20. Maybe (List Int):
 
-    - Maybe
-    - (List Int)
+    - Nothing
+    - Just []
+    - Just [4, 5, 6]
 
-21. (String, [Int]):
+21. (String, List Int):
 
     - ("elm", [])
     - ("hello", [3 // 1, 2 // 1, 1 // 1])
     - ("world", [5 // 1, 2 // 1, 7 // 1])
 
-22. (Int, [Bool], Maybe Char):
+22. (Int, List Bool, Maybe Char):
 
-    - (42, [True, False], Just 'a')
+    - (42/1 True, False, Just 'a')
     - (0, [], Nothing)
     - (-10, [False, True], Just 'b')
 
@@ -194,7 +197,7 @@
     - Just Nothing
     - Just (Just 42)
 
-24. (String, Maybe [Bool], (Char, Int)):
+24. (String, Maybe (List Bool), (Char, Int)):
 
     - ("elm", Just [True, False], ('a', 2 // 1))
     - ("hello", Nothing, ('b', 3 // 2))
@@ -203,3 +206,5 @@
 25. List String:
 
     - [ "apple", "banana", "orange", "grape" ]
+    - [ "chelz", "sandra", "jane", "jennifer" ]
+    - [ "cat", "rat", "dog", "chicken" ]
