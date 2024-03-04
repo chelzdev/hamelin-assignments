@@ -3,95 +3,86 @@ module Conditionals exposing (..)
 
 calculateGrade : Int -> String
 calculateGrade score =
-    if score >= 100 && score <= 0 then
-        "Invalide Score"
+    if score >= 100 || score <= 0 then
         -- If score is greater than or equal to 100 and score
         -- is less than or equal 0  "Invalide Score" will be assign as the grade.
+        "Invalide Score"
 
     else if score >= 90 then
+        -- If score is greater than or equal 90 "A"  will be assign as the grade.
         "A"
-        --If score is greater than or equal 90 "A"  will be assign as the grade.
 
     else if score >= 80 then
+        -- If score is greater than or equal 80 "B" will be assign as the grade.
         "B"
-        --If score is greater than or equal 80 "B" will be assign as the grade.
 
     else if score >= 70 then
+        -- If score is greater than or equal 70 "C" will be assign as the grade.
         "C"
-        --If score is greater than or equal 70 "C" will be assign as the grade.
 
     else if score >= 60 then
+        -- If the score greater than or equal 60 "D" will be assign as the grade.
         "D"
-        --If the score greater than or equal 60 "D" will be assign as the grade.
 
     else
+        -- Anything else from 59 to 0 should return "F"
+        -- This function  takes an Int and returns a string,
+        -- Then classify ages into different groups.
         "F"
-
-
-
---Anything else from 59 to 0 should return "F"
--- This function  takes an Int and returns a string,
--- Then classify ages into different groups.
 
 
 categorizeCharacter : Char -> String
 categorizeCharacter char =
-    --This line checks if the character is a vowel for both uppercase or lowercase
+    -- This line checks if the character is a vowel for both uppercase or lowercase
     if char == 'A' || char == 'E' || char == 'I' || char == 'O' || char == 'U' || char == 'a' || char == 'e' || char == 'i' || char == 'o' || char == 'u' then
         "Vowel"
 
-    else if Char.isDigit char then
+    else if char >= '0' || char <= '9' then
+        -- This line Checks if the character is a digit
         "Digit"
-        --This line Checks if the character is a digit
 
     else if (char >= 'a' && char <= 'z') || (char >= 'A' && char <= 'Z') then
+        -- This line checks if character is a consonant for both uppercase or lowercase
         "Consonant"
-        --This line checks if character is a consonant for both uppercase or lowercase
 
     else
+        -- Any other special character like '@' is categorize as "Unknown".
         "Unknown"
-
-
-
---Any other special character like '@' is categorize as "Unknown".
 
 
 ageClassifier : Int -> String
 ageClassifier age =
     if age < 0 || age > 1000 then
-        "Invalide age"
         -- Check if age is less than 0 then age should return ("Invalide age")
+        "Invalide age"
 
     else if age <= 12 then
-        "Child"
         -- Check if age is between 0 to 12 range then ("Child")
+        "Child"
 
     else if age <= 19 then
-        "Teenager"
         -- Check if age is between 13 to 19 range then ("Teenager")
+        "Teenager"
 
     else if age <= 64 then
+        -- Check if age is between 20 to 64 range then ("Adult")
         "Adult"
-        --Check if age is between 20 to 64 range then ("Adult")
 
     else if age <= 122 then
+        -- Check if age is between 65 to 122 range then ("Senior")
         "Senior"
-        --Check if age is between 65 to 122 range then ("Senior")
 
     else if age <= 969 then
+        -- Check if age is between 123 to 969 range then
+        -- ("Guinness World Records, let's goooooooo!")
         "Guinness World Records, let's goooooooo!"
-        --Check if age is between 123 to 969 range then
-        --("Guinness World Records, let's goooooooo!")
 
     else
+        -- Check if age is between 968 to 1000 range then
+        -- ("Methuselah?!")
+        -- This function twelveDaysOfChrismass is a case expression that takes an integer
+        -- day as input and returns a string as an output.
         "Methuselah?!"
-
-
-
---Check if age is between 968 to 1000 range then
---("Methuselah?!")
---This function twelveDaysOfChrismass is a case expression that takes an integer
--- day as input and returns a string as an output.
 
 
 twelveDaysOfChrismassCase : Int -> String
@@ -135,7 +126,6 @@ twelveDaysOfChrismassCase day =
 
         -- The underscore (_) represents any other number
         -- once you input numbers from 13, it will return "Invalide Day"
-        --
         _ ->
             "Invalid Day"
 
@@ -179,85 +169,79 @@ twelveDaysOfChristmasIfElse day =
         "Twelve Drummers Drumming"
 
     else
+        -- This function is an ifElse expression that
+        -- validate a number based on the month.
         "Invalid Day"
-
-
-
--- This function is an ifElse expression that
--- validate a number based on the month.
 
 
 convertNumberToMonthIfElse : Int -> String
 convertNumberToMonthIfElse month =
     if month == 1 then
-        "January"
         -- If the number is (1) then
         -- it will return the month "January"
+        "January"
 
     else if month == 2 then
-        "February"
         -- If the number is (2) then
         -- it will return the month "February"
+        "February"
 
     else if month == 3 then
-        "March"
         -- If the number is (3) then
         -- it will return the month "March"
+        "March"
 
     else if month == 4 then
-        "April"
         -- If the number is (4) then
         -- it will return the month "April"
+        "April"
 
     else if month == 5 then
-        "May"
         -- If the number is (5) then
         -- it will return the month "May"
+        "May"
 
     else if month == 6 then
-        "June"
         -- If the number is (6) then
         -- it will return the month "June"
+        "June"
 
     else if month == 7 then
-        "July"
         -- If the number is (7) then
         -- it will return the month  "July"
+        "July"
 
     else if month == 8 then
-        "August"
         -- If the number is (8) then
         -- it will return the month  "August"
+        "August"
 
     else if month == 9 then
-        "September"
         -- If the number is (9) then
         -- it will return the month  "September"
+        "September"
 
     else if month == 10 then
-        "October"
         -- If the number is (10) then
         -- it will return the month  "October"
+        "October"
 
     else if month == 11 then
-        "November"
         -- If the number is (11) then
         -- it will return the month  "November"
+        "November"
 
     else if month == 12 then
+        -- If the number is (11) then
+        -- it will return the month  "November"
         "December"
-        -- If the number is (12) then
-        -- it will return the month  "December"
 
     else
+        -- Any other number outside the ones are stored above
+        -- it will return  "Yeah, right, there's a 13th month!"
+        -- This function is case expression that
+        -- takes an Integer and returns a String.
         "Yeah, right, there's a 13th month!"
-
-
-
--- Any other number outside the ones are stored above
--- it will return  "Yeah, right, there's a 13th month!"
--- This function is case expression that
--- takes an Integer and returns a String.
 
 
 convertNumberToMonthCase : Int -> String
@@ -300,37 +284,31 @@ convertNumberToMonthCase month =
             "December"
 
         _ ->
+            -- This function trafficLightAction simulates a traffic light.
             "Yeah, right, there's a 13th month!"
-
-
-
--- This function trafficLightAction simulates a traffic light.
 
 
 trafficLightActionIfElse : String -> String
 trafficLightActionIfElse color =
     if color == "Red" then
-        "Stop"
         -- This line checks if input color is "Red" then
         -- return "Stop"
+        "Stop"
 
     else if color == "Yellow" then
-        "Prepare to stop"
         -- This line checks if input color is "Yellow" then
         -- return "Prepare to stop"
+        "Prepare to stop"
 
     else if color == "Green" then
-        "Go"
         -- This line checks if input color is "Green" then
         -- return "Go"
+        "Go"
 
     else
+        -- Anything else outside of these colors ("Red", "Yellow", and "Green")
+        -- then it will return "Are we on Mars?"
         "Are we on Mars?"
-
-
-
--- Anything else outside of these colors ("Red", "Yellow", and "Green")
--- then it will return "Are we on Mars?"
 
 
 trafficLightActionCase : String -> String
@@ -421,7 +399,13 @@ weeklydayMoodCase day =
 
 fizzBuzzGame : Int -> String
 fizzBuzzGame number =
-    if modBy 3 number == 0 && modBy 5 number == 0 then
+    if number < 0 then
+        "Buzzing into the negatives, are we?"
+
+    else if number > 100 then
+        String.fromInt number ++ " - Just another number in the universe!"
+
+    else if modBy 3 number == 0 && modBy 5 number == 0 then
         "FizzBuzz"
 
     else if modBy 3 number == 0 then
@@ -429,12 +413,6 @@ fizzBuzzGame number =
 
     else if modBy 5 number == 0 then
         "Buzz"
-
-    else if number < 0 then
-        "Buzzing into the negatives, are we?"
-
-    else if number > 100 then
-        String.fromInt number ++ " - Just another number in the universe!"
 
     else
         String.fromInt number
@@ -482,8 +460,5 @@ checkValidDate month day =
             "Invalid Date: " ++ month ++ " has only 30 days"
 
     else
+        -- Function to validate a date based on the month and day
         "Invalid Date: '" ++ month ++ "' is not a valid month"
-
-
-
--- Function to validate a date based on the month and day
